@@ -1,15 +1,15 @@
 ---
-import { getCurrentTimeInItaly, formatTimeForItaly } from "../lib/helpers";
+import { getCurrentTimeInJapan, formatTimeForJapan } from "../lib/helpers";
 import Card from "./Card/index.astro";
 ---
 
 <script>
-  import { formatTimeForItaly } from "../lib/helpers";
+  import { formatTimeForJapan } from "../lib/helpers";
 
   function updateClock() {
     const timeDisplay = document.getElementById("timeDisplay");
     if (timeDisplay) {
-      timeDisplay.textContent = formatTimeForItaly(new Date());
+      timeDisplay.textContent = formatTimeForJapan(new Date());
     }
   }
 
@@ -19,8 +19,8 @@ import Card from "./Card/index.astro";
 <Card colSpan="lg:col-span-2" rowSpan="md:row-span-1" title="Time zone">
   <h4
     id="timeDisplay"
-    class="text-5xl w-full h-[calc(100%-28px)] font-serif flex justify-center items-center"
+    class="text-5xl w-full h-[calc(100%-28px)] flex justify-center items-center"
   >
-    {formatTimeForItaly(getCurrentTimeInItaly())}
+    {formatTimeForJapan(getCurrentTimeInJapan())}
   </h4>
 </Card>
