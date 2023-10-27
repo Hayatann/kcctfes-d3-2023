@@ -3,29 +3,17 @@ import { getCurrentTimeInJapan, formatTimeForJapan } from "../lib/helpers";
 import Card from "./Card/index.astro";
 ---
 
-<Card colSpan="lg:col-span-2" rowSpan="md:row-span-1" title="点数表">
+<Card colSpan="" rowSpan="md:row-span-1" title="点数表">
   <p
     id="timeDisplay"
     class="text-sm  flex justify-center items-center"
   >
-      <ul>
-        <li><span class="text-green-400">緑</span>: 1点</li>
-        <li><span class="sky">水色</span>: 2点</li>
-        <li><span class="text-blue-600">青</span>: 3点</li>
-        <li><span class="text-yellow-500">黄色</span>: 4点</li>
-        <li><span class="orange">オレンジ</span>: 5点</li>
-        <li><span class="text-red-600">赤</span>: 7点</li>
-        <li><span class="text-purple-700">紫</span>: 10点</li>
-      </ul>
+  <div class="font-bold">
+    <ul>
+      <li>下段: 50点</li>
+      <li>上段手前: 100点</li>
+      <li>上段奥: 150点</li>
+    </ul>
+  </div>
   </p>
 </Card>
-
-<style>
-  .sky {
-    color: #00bfff;
-  }
-
-  .orange {
-    color: #ff8c00;
-  }
-</style>

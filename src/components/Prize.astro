@@ -1,44 +1,37 @@
 ---
+import Icon from "astro-icon";
 import Card from "./Card/index.astro";
-import Button from "./Button.astro";
-import { LINKS } from "../lib/constants";
-import { Icon } from "astro-icon";
-import Tooltip from "./Tooltip/index";
 ---
 
-<Card colSpan="md:col-span-3" rowSpan="md:row-span-2">
-  <div class="flex w-full h-full">
-    <div class="flex flex-col justify-between md:max-h-[300px] gap-4">
-      <div class="flex flex-col h-full">
-      <h1>カプセルフィッシングへようこそ。</h1>
-        <p class="m-0 font-light text-xl">
-          第60回神戸高専祭D3クラス企画<br>
-          カプセルフィッシングの公式サイトです。
-        </p>
-        <p class="mt-2 font-light text-xl">
-          ここでは、カプセルフィッシングのルールや景品などを紹介しています。
-        </p>
-        <p class="mt-2 font-light text-xl">
-          ここまで来てくれたあなたには何かお得な特典があるかもしれません。
-        </p>
-      </div>
-      <div class="flex gap-4">
-        <a href={LINKS.github} aria-label="github profile" target="_blank">
-          <Button aria-label="github profile">
-            <Icon name="ri:github-fill" class="h-6" />
-          </Button>
-        </a>
-        <a href={LINKS.KCCTFes} aria-label="linkeding profile" target="_blank">
-          <Button aria-label="linkedin profile">
-            <Icon name="ic:baseline-festival" class="h-6" />
-          </Button>
-        </a>
-      </div>
-    </div>
+<Card colSpan="md:col-span-3" rowSpan="md:row-span-40" title="景品">
+  <div class="md:flex gap-2 mt-4">
     <img
-      src="/7-2.jpg"
-      class="w-auto max-h-[300px] select-none absolute right-[-110px] bottom-[-20px] z-[-1] opacity-50 md:opacity-100 md:relative md:right-auto md:bottom-auto md:z-auto pointer-events-none"
-      alt="memoji of gianmarco"
+      src="/prize1.JPG"
+      class="text-center w-auto max-h-[300px] select-none right-[-110px] bottom-[-20px] z-[-1]  md:relative md:right-auto md:bottom-auto md:z-auto pointer-events-none"
+      alt="prize picture"
     />
+    <img
+      src="/prize2.jpg"
+      class="md:max-h[300px] md:max-w-[21rem] aspect-auto w-auto select-none right-[-110px] bottom-[-20px] z-[-1]  md:relative md:right-auto md:bottom-auto md:z-auto pointer-events-none"
+      alt="prize picture"
+    />
+  </div>
+  <div class="flex gap-w mt-4">
+    <p>
+      <ul>
+        <li>キーボード</li>
+        <li>iPhone12用保護フィルム</li>
+        <li>各種キーホルダー</li>
+        <li>各種ケーブル</li>
+        <li>各種クリアファイル</li>
+        <li>ラノベ</li>
+        <li>iPhone6s(ジャンク品)</li>
+        <li>イヤホン</li>
+        <li>貨物列車型小物入れ</li>
+        <li>3色ボールペン</li>
+        <li>ボールペン</li>
+        <li>飴</li>
+      </ul>
+    </p>
   </div>
 </Card>
